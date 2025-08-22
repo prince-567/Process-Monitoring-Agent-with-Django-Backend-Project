@@ -1,0 +1,27 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Process Monitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="{% static 'styles.css' %}" rel="stylesheet"/>
+</head>
+<body>
+  <header class="app-header">
+    <h1>Process Monitor</h1>
+    <div class="controls">
+      <select id="hostSelect"></select>
+      <input id="searchBox" placeholder="Search process..."/>
+      <button id="refreshBtn">Refresh</button>
+      <span id="lastUpdated"></span>
+    </div>
+  </header>
+  <main class="container">
+    <div id="tree" class="tree"></div>
+    <div id="empty" class="empty hidden">No data yet.</div>
+  </main>
+  <footer class="footer"><small>Live process hierarchy</small></footer>
+  <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
